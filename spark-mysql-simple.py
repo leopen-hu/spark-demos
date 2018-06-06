@@ -1,5 +1,4 @@
 from pyspark.sql import SparkSession
-import datetime
 
 if __name__ == "__main__":
     spark = (SparkSession.builder
