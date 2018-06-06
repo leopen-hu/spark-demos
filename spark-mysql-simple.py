@@ -2,10 +2,10 @@ from pyspark.sql import SparkSession
 import datetime
 
 if __name__ == "__main__":
-    spark = SparkSession.builder \
-      .appName("Spark Mysql Simple Application") \
-      .config("spark.some.config.option", "some-value") \
-      .getOrCreate()
+    spark = (SparkSession.builder
+      .appName("Spark Mysql Simple Application")
+      .config("spark.some.config.option", "some-value")
+      .getOrCreate())
 
     df = (spark.read
       .format("jdbc")
